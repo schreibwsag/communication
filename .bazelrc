@@ -37,6 +37,8 @@ common:linux_aarch64_score_gcc_12_2_0_posix --platforms=@score_bazel_platforms//
 common:linux_aarch64_score_gcc_12_2_0_posix --extra_toolchains=@score_gcc_aarch64_toolchain//:aarch64-linux-gcc_12.2.0
 
 # shorter names without gcc. Platform spec also used for Rust builds
+common:linux_x86_64 --platforms=@score_bazel_platforms//:x86_64-linux-gcc_12.2.0-posix
+common:linux_x86_64 --extra_toolchains=@score_gcc_x86_64_toolchain//:x86_64-linux
 common:lin_aarch64 --platforms=@score_bazel_platforms//:aarch64-linux-gcc_12.2.0-posix
 common:lin_aarch64 --extra_toolchains=@score_gcc_aarch64_toolchain//:aarch64-linux-gcc_12.2.0
 
