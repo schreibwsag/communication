@@ -125,36 +125,6 @@ use_repo(llvm, "llvm_toolchain")
 
 bazel_dep(name = "score_toolchains_rust", version = "0.7.0", dev_dependency = True)
 
-gcc_ferrocene = use_extension(
-    "@score_toolchains_rust//extensions:ferrocene_toolchain_ext.bzl",
-    "ferrocene_toolchain_ext",
-    dev_dependency = True,
-)
-gcc_ferrocene.toolchain(
-    name = "ferrocene_x86_64_unknown_linux_gnu_llvm",
-    coverage_tools_sha256 = "497958e925bc94833ea226d68f6d5ba38bd890f571c73e230141d2923e30dd94",
-    coverage_tools_strip_prefix = "779fbed05ae9e9fe2a04137929d99cc9b3d516fd/x86_64-unknown-linux-gnu",
-    coverage_tools_url = "https://github.com/eclipse-score/ferrocene_toolchain_builder/releases/download/1.0.1/coverage-tools-779fbed05ae9e9fe2a04137929d99cc9b3d516fd-x86_64-unknown-linux-gnu.tar.gz",
-    exec_triple = "x86_64-unknown-linux-gnu",
-    extra_rustc_flags = [
-        "-Clink-arg=-Wl,--no-as-needed",
-        "-Clink-arg=-lc++",
-        "-Clink-arg=-lm",
-        "-Clink-arg=-lc",
-    ],
-    sha256 = "4c08b41eaafd39cff66333ca4d4646a5331c780050b8b9a8447353fcd301dddc",
-    target_compatible_with = [
-        "@platforms//cpu:x86_64",
-        "@platforms//os:linux",
-    ],
-    target_triple = "x86_64-unknown-linux-gnu",
-    url = "https://github.com/eclipse-score/ferrocene_toolchain_builder/releases/download/1.0.1/ferrocene-779fbed05ae9e9fe2a04137929d99cc9b3d516fd-x86_64-unknown-linux-gnu.tar.gz",
-)
-use_repo(
-    gcc_ferrocene,
-    "ferrocene_x86_64_unknown_linux_gnu_llvm",
-)
-
 # We use here a pre-compiled fully static and hermetic clang_format binary
 # and not the one provided by llvm_toolchain, because the one from llvm_toolchain is not fully hermetic (and different version for now)
 download_file = use_repo_rule("@download_utils//download/file:defs.bzl", "download_file")
