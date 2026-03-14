@@ -15,7 +15,13 @@ common --@score_baselibs//score/json:base_library=nlohmann
 common --@score_baselibs//score/memory/shared/flags:use_typedshmd=False
 common --@score_logging//score/mw/log/flags:KRemote_Logging=False
 common --//score/mw/com/flags:tracing_library=@score_baselibs//score/analysis/tracing/generic_trace_library/stub_implementation
-common --extra_toolchains=@gcc_toolchain_x86_64//:cc_toolchain
+# Replacing
+# common --extra_toolchains=@gcc_toolchain_x86_64//:cc_toolchain
+# by
+common --extra_toolchains=@score_gcc_x86_64_toolchain//:x86_64-linux
+# Without this setting the normal host compiler will be used unless 
+# --extra_toolchains is given in the command line. Alternative:
+# register_toolchain in MODULE.bazel
 common --extra_toolchains=@score_toolchains_rust//toolchains/ferrocene:ferrocene_x86_64_unknown_linux_gnu
 build --incompatible_strict_action_env
 test --test_output=errors
