@@ -7,3 +7,11 @@ rust_binary(
     features = [],
     deps = [],
 )
+
+rust_binary(
+    name = "simple_clap_rs",
+    srcs = ["simple_clap.rs"],
+    data = [],
+    features = [],
+    deps = ["@score_communication_crate_index//:clap"],
+)
