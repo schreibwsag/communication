@@ -108,7 +108,8 @@ llvm.toolchain(
 )
 use_repo(llvm, "llvm_toolchain")
 
-bazel_dep(name = "score_toolchains_rust", version = "0.7.0", dev_dependency = True)
+# want to pick from toolchains_rust - see below
+# bazel_dep(name = "score_toolchains_rust", version = "0.7.0", dev_dependency = True)
 
 # We use here a pre-compiled fully static and hermetic clang_format binary
 # and not the one provided by llvm_toolchain, because the one from llvm_toolchain is not fully hermetic (and different version for now)
@@ -132,6 +133,13 @@ single_version_override(
     module_name = "rules_rust",
     version = "0.68.1-score",
 )
+
+# include recent rust toolchains
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+  versions = ["1.85.0"],
+)
+use_repo(rust, "rust_toolchains")
 
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.1.2", dev_dependency = True)
 
