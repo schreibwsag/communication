@@ -14,4 +14,5 @@ rust_binary(
     data = [],
     features = [],
     deps = ["@score_communication_crate_index//:clap"],
+    edition = "2021"
 )
