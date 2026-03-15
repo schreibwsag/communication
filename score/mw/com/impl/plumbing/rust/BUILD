@@ -19,6 +19,7 @@ rust_library(
     visibility = [
         "//score/mw/com/impl/plumbing:__subpackages__",
     ],
+    edition = "2021",
 )
 
 rust_library(
@@ -28,6 +29,7 @@ rust_library(
         "//score/mw/com:__subpackages__",
     ],
     deps = [":common_rs"],
+    edition = "2021",
 )
 
 rust_library(
@@ -40,6 +42,7 @@ rust_library(
         ":common_rs",
         "@score_communication_crate_index//:libc",
     ],
+    edition = "2021",
 )
 
 rust_test(
@@ -53,6 +56,7 @@ rust_test(
         "//score/mw/com/impl/plumbing/rust/test_support:test_helper_size_ffi_rs",
         "//score/mw/com/impl/plumbing/rust/test_support:test_utils_rs",
     ],
+    edition = "2021",
 )
 
 rust_test(
@@ -67,4 +71,5 @@ rust_test(
         "//score/mw/com/impl/plumbing/rust/test_support:test_utils_rs",
         "@score_communication_crate_index//:libc",
     ],
+    edition = "2021",
 )

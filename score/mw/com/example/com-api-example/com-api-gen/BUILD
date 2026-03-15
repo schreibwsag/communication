@@ -27,6 +27,7 @@ rust_library(
         ":vehicle_gen_cpp",
         "//score/mw/com/impl/rust/com-api/com-api",
     ],
+    edition = "2021",
 )
 
 cc_library(

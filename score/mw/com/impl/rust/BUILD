@@ -18,6 +18,7 @@ load("//score/mw:common_features.bzl", "COMPILER_WARNING_FEATURES")
 rust_library(
     name = "common",
     srcs = ["common.rs"],
+    edition = "2021",
 )
 
 cc_library(
@@ -78,6 +79,7 @@ rust_library(
         "@score_communication_crate_index//:arrayvec",
         "@score_communication_crate_index//:futures",
     ],
+    edition = "2021",
 )
 
 rust_library(
@@ -89,6 +91,7 @@ rust_library(
     deps = [
         ":common",
     ],
+    edition = "2021",
 )
 
 rust_library(
@@ -103,6 +106,7 @@ rust_library(
         ":skeleton_bridge_rs",
         "//score/mw/com/impl/plumbing/rust:sample_ptr_rs",
     ],
+    edition = "2021",
 )
 
 rust_library(
@@ -117,4 +121,5 @@ rust_library(
         ":proxy_bridge_rs",
         ":skeleton_bridge_rs",
     ],
+    edition = "2021",
 )

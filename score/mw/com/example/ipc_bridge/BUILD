@@ -75,6 +75,7 @@ rust_library(
         "//score/mw/com/impl/rust:mw_com",
         "@score_communication_crate_index//:libc",
     ],
+    edition = "2021",
 )
 
 rust_binary(
@@ -88,6 +89,7 @@ rust_binary(
         "@score_communication_crate_index//:clap",
         "@score_communication_crate_index//:futures",
     ],
+    edition = "2021",
 )
 
 cc_library(

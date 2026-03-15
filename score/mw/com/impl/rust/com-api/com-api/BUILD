@@ -26,4 +26,5 @@ rust_library(
         "//score/mw/com/impl/rust/com-api/com-api-runtime-lola",
         "//score/mw/com/impl/rust/com-api/com-api-runtime-mock",
     ],
+    edition = "2021",
 )

@@ -32,6 +32,7 @@ rust_library(
     visibility = [
         "//score/mw/com/impl/plumbing/rust:__pkg__",
     ],
+    edition = "2021",
 )
 
 rust_library(
@@ -45,4 +46,5 @@ rust_library(
         ":test_helper_size_provider",
         ":test_utils_rs",
     ],
+    edition = "2021",
 )

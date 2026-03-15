@@ -25,4 +25,5 @@ rust_test(
         "//score/mw/com/example/ipc_bridge:ipc_bridge_gen_rs",
         "//score/mw/com/impl/rust:proxy_bridge_rs",
     ],
+    edition = "2021",
 )

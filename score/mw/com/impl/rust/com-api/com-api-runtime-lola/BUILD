@@ -32,6 +32,7 @@ rust_library(
         "//score/mw/com/impl/rust/com-api/com-api-ffi-lola:bridge_ffi_rs",
         "@score_communication_crate_index//:futures",
     ],
+    edition = "2021",
 )
 
 rust_test(
@@ -39,4 +40,5 @@ rust_test(
     crate = ":com-api-runtime-lola",
     tags = ["manual"],
     deps = [":com-api-runtime-lola"],
+    edition = "2021",
 )

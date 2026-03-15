@@ -24,6 +24,7 @@ rust_proc_macro(
         "@score_communication_crate_index//:quote",
         "@score_communication_crate_index//:syn",
     ],
+    edition = "2021",
 )
 
 rust_doc_test(

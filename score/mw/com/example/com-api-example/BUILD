@@ -22,6 +22,7 @@ rust_binary(
         "//score/mw/com/example/com-api-example/com-api-gen",
         "//score/mw/com/impl/rust/com-api/com-api",
     ],
+    edition = "2021",
 )
 
 rust_test(
@@ -34,4 +35,5 @@ rust_test(
         "@score_communication_crate_index//:futures",
         "@score_communication_crate_index//:tokio",
     ],
+    edition = "2021",
 )

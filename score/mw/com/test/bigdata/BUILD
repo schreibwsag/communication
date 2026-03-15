@@ -52,6 +52,7 @@ rust_library(
         "//score/mw/com/impl/rust:mw_com",
         "@score_communication_crate_index//:libc",
     ],
+    edition = "2021",
 )
 
 rust_binary(
@@ -64,6 +65,7 @@ rust_binary(
         "//score/mw/com/impl/rust:mw_com",
         "@score_communication_crate_index//:futures",
     ],
+    edition = "2021",
 )
 
 rust_binary(
@@ -75,6 +77,7 @@ rust_binary(
         ":bigdata_gen_rs",
         "//score/mw/com/impl/rust:proxy_bridge_rs",
     ],
+    edition = "2021",
 )
 
 pkg_application(

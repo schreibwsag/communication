@@ -31,6 +31,7 @@ rust_library(
     deps = [
         "@score_baselibs_rust//src/containers",
     ],
+    edition = "2021",
 )
 
 rust_test(
@@ -38,6 +39,7 @@ rust_test(
     crate = ":com-api-concept",
     tags = ["manual"],
     deps = [":com-api-concept"],
+    edition = "2021",
 )
 
 rust_doc_test(
@@ -52,4 +54,5 @@ rust_test(
     srcs = ["interface_macros.rs"],
     features = ["link_std_cpp_lib"],
     deps = ["//score/mw/com/impl/rust/com-api/com-api"],
+    edition = "2021",
 )

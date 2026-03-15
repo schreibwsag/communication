@@ -23,4 +23,5 @@ rust_library(
         "//score/mw/com/impl/rust/com-api/com-api-concept",
         "@score_communication_crate_index//:futures",
     ],
+    edition = "2021",
 )

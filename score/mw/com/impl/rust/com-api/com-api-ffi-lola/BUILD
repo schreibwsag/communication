@@ -43,4 +43,5 @@ rust_library(
         "//score/mw/com/impl/plumbing/rust:sample_ptr_rs",
         "//score/mw/com/impl/rust:mw_com",
     ],
+    edition = "2021",
 )
