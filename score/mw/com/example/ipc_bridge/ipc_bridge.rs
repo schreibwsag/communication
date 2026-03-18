@@ -140,7 +140,8 @@ fn run_send_mode(instance_specifier: mw_com::InstanceSpecifier) {
     }
 }
 
-fn main() {
+#[no_mangle]
+pub extern "C" fn main_entry() {
     let args = Arguments::parse();
     println!(
         "[Rust] Size of MapApiLanesStamped: {}",
